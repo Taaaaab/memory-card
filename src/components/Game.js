@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import bb from './bb.jpg';
 import mk from './mk.webp';
 import ltm from './ltm.jpeg'
@@ -32,7 +32,7 @@ const Game = () => {
         setCard5(card5 = false);
         setCard6(card6 = false);
         setScore(score = 0);
-    }
+    };
 
     const card1Ticked = () => {
         if(card1 === false) {
@@ -94,13 +94,27 @@ const Game = () => {
         console.log(card6);
     };
 
+    useEffect(() => {
+        const gridRandomize = () => {
+            const grid = document.querySelector(".grid");
+    
+            for (let i = grid.children.length; i >= 0; i--) {
+                grid.appendChild(grid.children[Math.random() * i | 0]);
+            };
+        };
+
+        document.addEventListener("click", gridRandomize);
+
+      }, []);
+
+
     return (
         <div>
             <div className="scoreBoard">
                 <div>Score: {score}</div>
                 <div>Best Score: {bestScore}</div>
             </div>
-            <div className="cards">
+            <div className="grid">
                 <div className="card" onClick={card1Ticked}>
                     <img src={bb} className="animal" alt="bush baby" />
                     <p>Bush Baby</p>
