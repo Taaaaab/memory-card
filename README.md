@@ -4,7 +4,7 @@ This project was completed for The Odin Project Memory Card Assignment. The goal
 Select unique animals and grid will re-shuffle on each selection.
 Current streak and high-score displayed. Streak is ended upon repeat selection of animal.
 
-![Alt text](https://github.com/Taaaaab/personal-portfolio/blob/main/photos/memory-card.png?raw=true "Screenshot")
+![Alt text](https://github.com/Taaaaab/personal-portfolio/blob/main/src/assets/memory-card.png?raw=true "Screenshot")
 
 ## Deployed site on Github Pages
 
